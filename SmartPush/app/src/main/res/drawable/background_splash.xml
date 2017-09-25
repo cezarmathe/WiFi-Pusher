@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:drawable="@color/app_white"/>
+
+    <item
+        android:width="125dp"
+        android:height="125dp"
+        android:gravity="center">
+        <bitmap
+            android:src="@mipmap/ic_smartpush_2"
+            />
+    </item>
+
+</layer-list>

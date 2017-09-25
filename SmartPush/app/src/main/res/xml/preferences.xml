@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory
+        android:title="@string/preference_category"
+        android:key="pref_cat">
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:id="@+id/reset_one_time"
+            android:key="reset_one_time"
+            android:summary="@string/reset_one_time_summary"
+            android:title="@string/reset_one_time_title" />
+    </PreferenceCategory>
+</PreferenceScreen>
+
+
+<!--<CheckBoxPreference-->
+<!--android:defaultValue="false"-->
+<!--android:key="reset_everytime"-->
+<!--android:id="@+id/reset_every_time"-->
+<!--android:summary="@string/reset_settings_summary"-->
+<!--android:title="@string/reset_settings_title" />-->
+
+<!--<PreferenceCategory-->
+<!--android:title="Pushers"-->
+<!--android:key="pusher_cat">-->
+<!--<CheckBoxPreference-->
+    <!--android:defaultValue="true"-->
+    <!--android:key="auto_check"-->
+    <!--android:summary="@string/auto_remove_sumarry"-->
+    <!--android:title="@string/auto_remove_title"/>-->
+<!--</PreferenceCategory>-->
