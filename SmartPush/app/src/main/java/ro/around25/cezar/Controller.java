@@ -69,12 +69,6 @@ public class Controller extends AppCompatActivity {
                 Intent setI = new Intent(getApplicationContext(), SettingsActivity.class);
                 startActivity(setI);
                 return true;
-
-            case R.id.how_to_setup_button:
-                Intent htsI = new Intent(getApplicationContext(), HowToSetupActivity.class);
-                startActivity(htsI);
-                return true;
-
             default:
                 return super.onOptionsItemSelected(item);
         }

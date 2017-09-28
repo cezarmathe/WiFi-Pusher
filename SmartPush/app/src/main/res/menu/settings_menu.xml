@@ -6,10 +6,4 @@
         android:orderInCategory="100"
         android:title="@string/settings_button"
         app:showAsAction="never" />
-
-    <item
-        android:id="@+id/how_to_setup_button"
-        android:orderInCategory="100"
-        android:title="@string/how_to_setup_button"
-        app:showAsAction="never" />
 </menu>

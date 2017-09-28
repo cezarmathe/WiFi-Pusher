@@ -38,6 +38,7 @@ public class ChanelAdapter extends ArrayAdapter<Chanel> implements View.OnClickL
         TextView textName;
         Button on;
         Button off;
+        Button tap;
     }
 
     public ChanelAdapter(ArrayList<Chanel> data, Context context, MqttHelper mqttHelper) {
@@ -64,6 +65,7 @@ public class ChanelAdapter extends ArrayAdapter<Chanel> implements View.OnClickL
             viewHolder.textName = (TextView) convertView.findViewById(R.id.name);
             viewHolder.on = (Button) convertView.findViewById(R.id.on);
             viewHolder.off = (Button) convertView.findViewById(R.id.off);
+            viewHolder.tap = (Button) convertView.findViewById(R.id.tap);
 
             result=convertView;
 
@@ -83,7 +85,7 @@ public class ChanelAdapter extends ArrayAdapter<Chanel> implements View.OnClickL
             public void onClick(View view) {
                 Log.d(LOGGER, "Clicked on " + chanel.getName());
                 try {
-                    mqttHelper.mqttAndroidClient.publish(chanel.getName(), new MqttMessage("90".getBytes()));
+                    mqttHelper.mqttAndroidClient.publish(chanel.getName(), new MqttMessage("30".getBytes()));
                 } catch (MqttException e) {
                     e.printStackTrace();
                 }
@@ -94,8 +96,24 @@ public class ChanelAdapter extends ArrayAdapter<Chanel> implements View.OnClickL
             public void onClick(View view) {
                 Log.d(LOGGER, "Clicked off " + chanel.getName());
                 try {
-                    mqttHelper.mqttAndroidClient.publish(chanel.getName(), new MqttMessage("0".getBytes()));
+                    mqttHelper.mqttAndroidClient.publish(chanel.getName(), new MqttMessage("140".getBytes()));
                 } catch (MqttException e) {
+                    e.printStackTrace();
+                }
+            }
+        });
+
+        viewHolder.tap.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Log.d(LOGGER, "Clicked tap " + chanel.getName());
+                try {
+                    mqttHelper.mqttAndroidClient.publish(chanel.getName(), new MqttMessage("30".getBytes()));
+                    Thread.sleep(750);
+                    mqttHelper.mqttAndroidClient.publish(chanel.getName(), new MqttMessage("140".getBytes()));
+                } catch (MqttException e) {
+                    e.printStackTrace();
+                } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
             }

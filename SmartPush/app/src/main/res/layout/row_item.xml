@@ -18,13 +18,8 @@
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true">
-
-        <Button
-            android:id="@+id/on"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="On" />
+        android:layout_centerInParent="true"
+        android:id="@+id/linearLayout">
 
     </LinearLayout>
 
@@ -32,9 +27,27 @@
         android:id="@+id/off"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
+        android:text="Off"
         android:layout_alignParentTop="true"
-        android:layout_marginEnd="30dp"
-        android:text="Off" />
+        android:layout_toEndOf="@+id/linearLayout"
+        android:layout_marginStart="10dp" />
+
+    <Button
+        android:id="@+id/on"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="On"
+        android:layout_alignParentTop="true"
+        android:layout_alignEnd="@+id/linearLayout" />
+
+    <Button
+        android:id="@+id/tap"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/off"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/off"
+        android:layout_marginStart="102dp"
+        android:text="Tap" />
 
 </RelativeLayout>

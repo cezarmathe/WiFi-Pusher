@@ -5,11 +5,11 @@
         android:drawable="@color/app_white"/>
 
     <item
-        android:width="125dp"
-        android:height="125dp"
+        android:width="200dp"
+        android:height="200dp"
         android:gravity="center">
         <bitmap
-            android:src="@mipmap/ic_smartpush_2"
+            android:src="@mipmap/ic_smartpush_words"
             />
     </item>
 
